@@ -609,6 +609,68 @@ textarea {
     -o-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
 
+.hideable {
+  padding: 0;
+  height: 0;
+  overflow: hidden; }
+  .hideable.content-section {
+    padding: 0; }
+  .hideable.show {
+    overflow: display;
+    height: inherit;
+    padding: inherit;
+    -webkit-animation: slideUp 0.5s ease-in;
+    -moz-animation: slideUp 0.5s ease-in;
+    animation: slideUp 0.5s ease-in; }
+
+@-webkit-keyframes slideUp {
+  0% {
+    padding: 0;
+    height: 0; }
+  1% {
+    padding: 0;
+    height: 0;
+    border-bottom: 5px solid #006bf6; }
+  99% {
+    padding: inherit;
+    height: inherit;
+    border-bottom: 5px solid #006bf6; }
+  100% {
+    padding: inherit;
+    height: inherit; } }
+
+@-moz-keyframes slideUp {
+  0% {
+    padding: 0;
+    height: 0; }
+  1% {
+    padding: 0;
+    height: 0;
+    border-bottom: 5px solid #006bf6; }
+  99% {
+    padding: inherit;
+    height: inherit;
+    border-bottom: 5px solid #006bf6; }
+  100% {
+    padding: inherit;
+    height: inherit; } }
+
+@keyframes slideUp {
+  0% {
+    padding: 0;
+    height: 0; }
+  1% {
+    padding: 0;
+    height: 0;
+    border-bottom: 5px solid #006bf6; }
+  99% {
+    padding: inherit;
+    height: inherit;
+    border-bottom: 5px solid #006bf6; }
+  100% {
+    padding: inherit;
+    height: inherit; } }
+
 .content {
   height: 100%;
   margin: 0 auto; }
@@ -625,35 +687,6 @@ textarea {
 
 .hire-me-bottom {
   text-align: center; }
-
-.hideable {
-  height: 0;
-  padding: 0;
-  overflow: hidden; }
-  .hideable.show {
-    height: inherit;
-    overflow: display;
-    -webkit-animation: slideUp 1s ease-out;
-    -moz-animation: slideUp 1s ease-out;
-    animation: slideUp 1s ease-out; }
-
-@-webkit-keyframes slideUp {
-  from {
-    height: 0; }
-  to {
-    height: inherit; } }
-
-@-moz-keyframes slideUp {
-  from {
-    height: 0; }
-  to {
-    height: inherit; } }
-
-@keyframes slideUp {
-  from {
-    height: 0; }
-  to {
-    height: inherit; } }
 
 .menu-button {
   position: absolute;

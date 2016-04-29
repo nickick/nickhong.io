@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_animations';
+@import '_hideable';
 
 .content {
   height: 100%;
@@ -25,32 +26,6 @@
 
 .hire-me-bottom {
   text-align: center;
-}
-
-.hideable {
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-
-  &.show {
-    height: inherit;
-    overflow: display;
-
-    @mixin animation--slideUp {
-      @include animation(slideUp 1s ease-out);
-    }
-
-    @include keyframes(slideUp) {
-      from {
-        height: 0;
-      }
-      to {
-        height: inherit;
-      }
-    }
-    @include animation--slideUp;
-
-  }
 }
 
 .menu-button {

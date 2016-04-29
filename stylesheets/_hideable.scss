@@ -1,0 +1,43 @@
+.hideable {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+
+  &.content-section {
+    padding: 0;
+  }
+
+  &.show {
+    overflow: display;
+    height: inherit;
+    padding: inherit;
+
+    @mixin animation--slideUp {
+      @include animation(slideUp 0.5s ease-in);
+    }
+
+    @include keyframes(slideUp) {
+      0% {
+        padding: 0;
+        height: 0;
+      }
+      1% {
+        padding: 0;
+        height: 0;
+        border-bottom: 5px solid $ocean-blue;
+      }
+
+      99% {
+        padding: inherit;
+        height: inherit;
+        border-bottom: 5px solid $ocean-blue;
+      }
+      100% {
+        padding: inherit;
+        height: inherit;
+      }
+    }
+    @include animation--slideUp;
+
+  }
+}

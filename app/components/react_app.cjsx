@@ -14,12 +14,12 @@ ReactApp = React.createClass
         this.scrollToItem(e.state.item)
 
   scrollToItem: (itemName) ->
-    if window?
-      item = window.document.getElementById("#{itemName}")
-      if item?
-        smoothScroll(item)
-      else
-        window.document.addEventListener "DOMContentLoaded", this.scrollToItem.bind(this, itemName)
+    # if window?
+    #   item = window.document.getElementById("#{itemName}")
+    #   if item?
+    #     smoothScroll(item)
+    #   else
+    #     window.document.addEventListener "DOMContentLoaded", this.scrollToItem.bind(this, itemName)
 
   goToPath: (path) ->
     item = path.substr(1)
