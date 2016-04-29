@@ -1,42 +1,96 @@
-.hideable {
-  @include transform(translateY(100%));
+.hideable.content-section {
+  $animation-timing: 1s;
   height: 0;
   padding: 0;
   overflow: hidden;
+  background: white;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 
-  &.content-section {
-    padding: 0;
-    height: 0;
+  &.hiding {
+    z-index: 1;
+    height: 100%;
+    overflow: visible;
+    top: 0;
+    @mixin animation--blurOut {
+      @include animation(blurOut $animation-timing ease-out);
+    }
+
+    @include keyframes(blurOut) {
+      0% {
+        height: 100%;
+        overflow: visible;
+        @include filter(blur(0px));
+        z-index: 1;
+      }
+      99% {
+        height: 0;
+        height: 0;
+        padding: 0;
+        overflow: visible;
+        @include filter(blur(5px));
+        z-index: 1;
+      }
+      100% {
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        @include filter(blur(5px));
+        z-index: 1;
+      }
+    }
+    @include animation--blurOut;
   }
 
-  &.show {
-    height: inherit;
-    padding: inherit;
-    overflow: display;
+  &.showing {
     @include transform(translateY(0%));
+    z-index: 5;
 
     @mixin animation--slideUp {
-      @include animation(slideUp 0.5s ease-out);
+      @include animation(slideUp $animation-timing ease-out);
     }
 
     @include keyframes(slideUp) {
       0% {
         @include transform(translateY(100%));
+        height: 0;
+        overflow: hidden;
+        z-index: 5;
       }
       1% {
-        @include transform(translateY(190%));
+        @include transform(translateY(99%));
         border-top: 5px solid $ocean-blue;
+        height: inherit;
+        overflow: hidden;
+        z-index: 5;
       }
 
       99% {
         @include transform(translateY(0%));
         border-top: 5px solid $ocean-blue;
+        height: inherit;
+        overflow: visible;
+        z-index: 5;
       }
       100% {
         @include transform(translateY(0%));
+        height: inherit;
+        overflow: visible;
+        z-index: 5;
       }
     }
     @include animation--slideUp;
+  }
 
+  &.hidden {
+    z-index: 1;
+  }
+
+  &.show {
+    height: 100%;
+    overflow: visible;
+    z-index: 5;
+    @include transform(translateY(0%));
   }
 }

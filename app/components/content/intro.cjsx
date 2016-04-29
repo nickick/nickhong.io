@@ -1,13 +1,13 @@
 React = require('react');
 Header = require('./header');
 HireMe = require('./hire_me');
-classNames = require('classNames');
+ContentSection = require('./content_section')
 
 Intro = React.createClass
   render: ->
-    <div className={classNames({intro: true, hideable: true, show: this.props.show})}>
+    <ContentSection identifer='intro' show={this.props.show} fullWidth={true}>
       <Header />
-      <div className='content-section intro-text'>
+      <div className='intro-text'>
         <h3>Hi, I'm Nick.</h3>
         <p>I make <strong>beautiful websites.</strong></p>
         <p>I focus on <strong>clarity, design, animation</strong>, and <strong>mobile responsiveness</strong>.</p>
@@ -15,6 +15,6 @@ Intro = React.createClass
           <HireMe />
         </div>
       </div>
-    </div>
+    </ContentSection>
 
 module.exports = Intro

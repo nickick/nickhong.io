@@ -1,24 +1,39 @@
 React = require('react')
 MenuItem = require('./menu_item')
-classNames = require('classnames')
+cx = require('classnames')
 _ = require('underscore')
 
 Menu = React.createClass
   getInitialState: ->
-    { menuOpen: false }
+    {
+      menuOpen: false
+      menuClosed: false
+      loading: true
+    }
+
+  componentDidMount: ->
+    this.setState(loading: false)
 
   toggleMenu: (_) ->
-    this.setState(menuOpen: !this.state.menuOpen)
+    this.setState(menuOpen: !this.state.menuOpen, menuClosed: !this.state.loading && this.state.menuOpen)
 
   goToPath: (item) ->
     this.props.goToPath(item)
 
   render: ->
-    menuButtonClasses = classNames({
-      "menu-button": true,
-      white: this.props.currentItem == 'about' || this.state.menuOpen,
-      open: this.state.menuOpen})
-    menuClasses = classNames({"menu": true, open: this.state.menuOpen})
+    menuButtonClasses = cx({
+      "menu-button": true
+      white: this.props.currentItem == 'about' || this.state.menuOpen
+      open: this.state.menuOpen
+      close: this.state.menuClosed
+    })
+
+    menuClasses = cx({
+      "menu": true
+      open: this.state.menuOpen
+      close: this.state.menuClosed
+    })
+
     menuItems = _.map ['About', 'Portfolio', 'Skills', 'Resume', 'Contact'], (item, i) =>
       <MenuItem toggleMenu={this.toggleMenu} goToPath={this.goToPath} path={"/#{item.toLowerCase()}"} title={item} key={i} />
 

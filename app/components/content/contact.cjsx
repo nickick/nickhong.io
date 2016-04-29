@@ -1,11 +1,11 @@
 React = require('react')
 HireMe = require('./hire_me')
-classNames = require('classNames')
+ContentSection = require('./content_section')
 
 Content = React.createClass
   render: ->
-    <div className={classNames({'hire-me-bottom': true, 'content-section': true, hideable: true, show: this.props.show})} id='contact'>
+    <ContentSection identifer='contact' show={this.props.show}>
       <HireMe />
-    </div>
+    </ContentSection>
 
 module.exports = Content
