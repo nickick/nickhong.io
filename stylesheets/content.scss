@@ -126,6 +126,7 @@
   display: none;
   z-index: 2;
   position: fixed;
+  top: 0;
   background: hsla(0,0,5%,.95);
   color: white;
   height: 100%;
@@ -159,6 +160,7 @@
 
   &.open {
     display: block;
+    position: fixed;
     @include animation(fadeIn 0.3s ease-out);
     @include keyframes(fadeIn) {
       from {

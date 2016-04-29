@@ -10,7 +10,7 @@ Intro = React.createClass
       <div className='content-section intro-text'>
         <h3>Hi, I'm Nick.</h3>
         <p>I make <strong>beautiful websites.</strong></p>
-        <p>I focus on <strong>clarity, design</strong>, and <strong>mobile responsiveness</strong>.</p>
+        <p>I focus on <strong>clarity, design, animation</strong>, and <strong>mobile responsiveness</strong>.</p>
         <div className='hire-me-container'>
           <HireMe />
         </div>
