@@ -1,0 +1,34 @@
+@import '_variables';
+@import '_animations';
+
+.button {
+  $color: $ocean-blue;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  background-color: $color;
+  cursor: pointer;
+
+  &:hover {
+    @include animation(button--hover 0.3s ease-in-out);
+    background-color: lighten($color, 10%);
+  }
+
+  @include keyframes(button--hover) {
+    0% {
+      background-color: lighten($color, 0%);
+      @include transform(scale3d(1, 1, 1));
+    }
+
+    50% {
+      @include transform(scale3d(1.05, 1.05, 1.05));
+    }
+
+    100% {
+      background-color: lighten($color, 10%);
+      @include transform(scale3d(1, 1, 1));
+    }
+  }
+}
+
