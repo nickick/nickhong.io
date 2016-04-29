@@ -17,23 +17,38 @@
 }
 
 .content-section {
-  &.show, &.showing {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+
+  &.show, &.showing, &.hiding {
     padding: 20px;
 
     &.full-width {
       padding: 0;
+
+      .intro-text {
+        padding: 60px 20px 20px;
+
+        h3 {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
-
-
-  &.intro-text {
-    padding-top: 50px;
+  h3 {
+    display: inline-block;
+    border-bottom: 1px solid $ocean-blue;
   }
+
 }
 
 .intro-text {
-  padding-top: 60px;
+  .hire-me-container {
+    padding-top: 10px;
+  }
 }
 
 .hire-me-bottom {

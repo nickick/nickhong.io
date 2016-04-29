@@ -35,6 +35,8 @@ ContentSection = React.createClass
       state = { hiding: false, showing: false, hide: true, show: false }
     else if e.animationName == 'slideUp' # show this component
       state = { hiding: false, showing: false, hide: false, show: true }
+    else
+      return
     this.setState(state)
     this.refs.element?.removeEventListener 'animationend', this.resetStates
 
