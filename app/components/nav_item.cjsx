@@ -1,9 +1,9 @@
 React = require('react')
 classNames = require('classnames')
 
-MenuItem = React.createClass
+NavItem = React.createClass
   goToPath: (e) ->
-    this.props.toggleMenu(e)
+    this.props.toggleNav(e)
     this.props.goToPath(this.props.path)
 
   render: ->
@@ -13,4 +13,4 @@ MenuItem = React.createClass
       </a>
     </li>
 
-module.exports = MenuItem
+module.exports = NavItem

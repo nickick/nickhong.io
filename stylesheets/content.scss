@@ -1,260 +1,39 @@
 @import '_variables';
 @import '_animations';
+@import 'neat';
 @import '_hideable';
+@import '_navigation';
+@import '_intro';
+@import '_projects';
+@import '_resume';
 
 .content {
-  height: 100%;
   margin: 0 auto;
+  width: 100%;
+  position: relative;
 
-  h3 {
-    color: $ocean-blue;
-    text-align: center;
-  }
-
-  p {
-    text-align: center;
+  @media print {
+    margin-top: 0;
   }
 }
 
 .content-section {
   box-sizing: border-box;
   width: 100%;
-  text-align: center;
 
   &.show, &.showing, &.hiding {
-    padding: 20px;
+    padding: $container-padding;
 
-    &.full-width {
-      padding: 0;
-
-      .intro-text {
-        padding: 60px 20px 20px;
-
-        h3 {
-          border-bottom: none;
-          margin-bottom: 0;
-        }
-      }
+    .contents {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
     }
   }
 
   h3 {
     display: inline-block;
-    border-bottom: 1px solid $ocean-blue;
-  }
-
-}
-
-.intro-text {
-  .hire-me-container {
-    padding-top: 10px;
-  }
-}
-
-.hire-me-bottom {
-  text-align: center;
-}
-
-.menu-button {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 10px;
-  z-index: 100;
-
-  &.white {
-    .menu-button--bars--bar {
-      background: white;
-    }
-  }
-
-  .menu-button--bars {
-    width: 30px;
-  }
-
-  .menu-button--bars--bar {
-    height: 2px;
-    margin-top: 5px;
-    background: $text-black;
-    float: right;
-
-    &:nth-child(1) {
-      width: 100%;
-      margin-top: 0;
-    }
-
-    &:nth-child(2) {
-      width: 70%;
-    }
-
-    &:nth-child(3) {
-      width: 80%;
-    }
-
-    &:nth-child(4) {
-      width: 90%;
-      margin-bottom: 5px;
-    }
-  }
-
-  &.open {
-    right: 0;
-    left: 0;
-
-    .menu-button--bars--bar {
-      float: none;
-    }
-
-    @include animation(menu-button-open 0.3s ease-out);
-    @include keyframes(menu-button-open) {
-      from { left: 100% };
-      to { left: 0% };
-    }
-  }
-
-  &.close {
-    right: 0;
-
-    .menu-button--bars--bar {
-      float: right;
-    }
-
-    @include animation(menu-button-close 0.3s ease-out);
-    @include keyframes(menu-button-close) {
-      from { left: 0% };
-      to { left: 80% };
-    }
-
-  }
-}
-
-    // reattempt logo forming after finishing rest of site
-    // top: 10px;
-
-    // .menu-button--bars--bar {
-    //   &:nth-child(1) {
-    //     width: 65%;
-    //     @include transform(translate(-15px, 0px) rotate(90deg));
-    //     @include animation(menu-logo-1 0.3s ease-in-out);
-
-    //     @include keyframes(menu-logo-1) {
-    //       from {
-    //         @include transform(translate(0,0) rotate(0deg));
-    //       }
-    //       to {
-    //         @include transform(translate(-15px, 0px) rotate(90deg));
-    //       }
-    //     }
-    //   }
-
-    //   &:nth-child(2) {
-    //     width: 100%;
-    //     @include transform(translate(0px,-8px) rotate(45deg));
-    //   }
-
-    //   &:nth-child(3) {
-    //     width: 65%;
-    //     @include transform(translate(5px,-15px) rotate(90deg));
-    //   }
-
-    //   &:nth-child(4) {
-    //     width: 90%;
-    //     @include transform(translate(-1px,-22px));
-
-    //   }
-    // }
-
-.menu {
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  display: block;
-  opacity: 0;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  li {
-    padding: 10px 0;
-    border-top: 1px solid hsla(0,0,30%,.8);
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-top-width: 0px;
-    border-bottom-width: 1px;
-    @include border-image(linear-gradient(left,hsla(0,0,5%,0),hsla(0,0,5%,.5),hsla(0,0,50%,.5),hsla(0,0,5%,.5),hsla(0,0,5%,0)) 1 stretch);
-    &:nth-child(1) {
-      margin-top: 10px;
-    }
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
-
-  &.open {
-    display: block;
-    position: fixed;
-    background: hsla(0,0,5%,.95);
-    color: white;
-    height: 100%;
-    width: 100%;
-    padding: 40px 0;
-    opacity: 1;
-    @include animation(fadeMenuIn 0.3s ease-out);
-    @include keyframes(fadeMenuIn) {
-      from {
-        color: transparent;
-        background: hsla(0,0,5%,0);
-        opacity: 0;
-      }
-      to {
-        color: white;
-        background: hsla(0,0,5%,.95);
-        opacity: 1;
-      }
-    }
-  }
-
-  &.close {
-    display: block;
-    position: fixed;
-    right: 0;
-    top: 0;
-    background: hsla(0,0,5%,0);
-    color: transparent;
-    height: 0%;
-    width: 0%;
-    opacity: 0;
-    overflow: hidden;
-    padding: 40px 0;
-    @include animation(fadeMenuOut 0.3s ease-out);
-    @include keyframes(fadeMenuOut) {
-      0% {
-        color: white;
-        background: hsla(0,0,5%,.95);
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-      }
-      99% {
-        color: transparent;
-        background: hsla(0,0,5%,0);
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-      }
-
-      100% {
-        color: transparent;
-        background: hsla(0,0,5%,0);
-        height: 0%;
-        width: 0%;
-      }
-    }
+    color: $text-black;
+    font-family: 'Lora', serif;
   }
 }

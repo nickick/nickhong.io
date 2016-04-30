@@ -2,6 +2,20 @@ React = require('react')
 cx = require('classNames')
 
 ContentSection = React.createClass
+  propTypes: {
+    identifer: React.PropTypes.string.isRequired
+    show: React.PropTypes.bool.isRequired
+    children: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.node]).isRequired
+    fullWidth: React.PropTypes.bool
+    contentsWrap: React.PropTypes.bool
+  }
+
+  getDefaultProps: ->
+    {
+      fullWidth: false
+      contentsWrap: true
+    }
+
   getInitialState: ->
     {
       hiding: false
@@ -54,7 +68,9 @@ ContentSection = React.createClass
 
   render: ->
     <div ref='element' className={this.classNames()} id={this.props.identifier}>
-      {this.props.children}
+      <div className='contents'>
+        {this.props.children}
+      </div>
     </div>
 
 module.exports = ContentSection

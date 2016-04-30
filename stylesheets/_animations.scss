@@ -1,7 +1,7 @@
 @import 'bourbon';
 
 @mixin animation--pop {
-  @include animation(pop 3s ease-in-out infinite);
+  @include animation(pop .5s ease-in-out infinite);
 }
 
 @include keyframes(pop) {
@@ -10,7 +10,7 @@
   }
 
   50% {
-    @include transform(scale3d(1.02, 1.02, 1.02));
+    @include transform(scale3d(1.1, 1.1, 1.1));
   }
 
   100% {

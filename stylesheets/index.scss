@@ -1,12 +1,14 @@
 @import 'normalize';
 @import '_variables';
 @import '_animations';
+@import 'neat';
 @import 'header';
 @import 'content';
 
 html,body,#react-main-mount,#react-app{
   width: 100%;
   height: 100%;
+  background: $subtle-background;
 }
 
 body {

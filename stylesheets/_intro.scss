@@ -1,0 +1,51 @@
+.intro {
+  .profile-pic {
+    $width: 300px;
+    position: absolute;
+    top: 20px;
+    width: $width;
+    max-width: 35%;
+
+    img {
+      vertical-align: top;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include media($mobile) {
+      top: 0;
+      left: 50%;
+      margin-left: -18%;
+    }
+  }
+
+  .intro-text {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    text-align: left;
+
+    @include media($mobile) {
+      top: 150px;
+      width: 80%;
+      left: 10%;
+
+      h3 {
+        margin: 0;
+      }
+    }
+  }
+
+  .hire-me-container {
+    padding-top: 10px;
+  }
+
+  .animate-untz {
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      @include animation--pop;
+    }
+  }
+}

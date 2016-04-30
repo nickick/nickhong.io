@@ -1,0 +1,204 @@
+/*
+    Desktop nav button and nav menu
+*/
+.desktop-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  ul {
+    list-style: none;
+    width: 100%;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: $text-black;
+  }
+
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+
+/*
+    Mobile nav button and nav menu
+*/
+.mobile-nav-button {
+  display: none;
+
+  @include media($mobile) {
+    display: block;
+  }
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 30px 30px 10px 30px;
+  z-index: 100;
+
+  &.white {
+    .nav-button--bars--bar {
+      background: white;
+    }
+  }
+
+  .nav-button--bars {
+    width: 30px;
+  }
+
+  .nav-button--bars--bar {
+    height: 2px;
+    margin-top: 5px;
+    background: $text-black;
+    float: right;
+
+    &:nth-child(1) {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    &:nth-child(2) {
+      width: 70%;
+    }
+
+    &:nth-child(3) {
+      width: 80%;
+    }
+
+    &:nth-child(4) {
+      width: 90%;
+      margin-bottom: 5px;
+    }
+  }
+
+  &.open {
+    right: 0;
+    left: 0;
+
+    .nav-button--bars--bar {
+      float: none;
+    }
+
+    @include animation(nav-button-open 0.3s ease-out);
+    @include keyframes(nav-button-open) {
+      from { left: 100% };
+      to { left: 0% };
+    }
+  }
+
+  &.close {
+    right: 0;
+
+    .nav-button--bars--bar {
+      float: right;
+    }
+
+    @include animation(nav-button-close 0.3s ease-out);
+    @include keyframes(nav-button-close) {
+      from { left: 0% };
+      to { left: 75% };
+    }
+
+  }
+}
+
+.mobile-nav {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  display: block;
+  opacity: 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid hsla(0,0,30%,.8);
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    @include border-image(linear-gradient(left,hsla(0,0,5%,0),hsla(0,0,5%,.5),hsla(0,0,50%,.5),hsla(0,0,5%,.5),hsla(0,0,5%,0)) 1 stretch);
+    &:nth-child(1) {
+      margin-top: 10px;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  &.open {
+    display: block;
+    position: fixed;
+    background: hsla(0,0,5%,.95);
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 40px 0;
+    opacity: 1;
+    @include animation(fadenavIn 0.3s ease-out);
+    @include keyframes(fadenavIn) {
+      from {
+        color: transparent;
+        background: hsla(0,0,5%,0);
+        opacity: 0;
+      }
+      to {
+        color: white;
+        background: hsla(0,0,5%,.95);
+        opacity: 1;
+      }
+    }
+  }
+
+  &.close {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: hsla(0,0,5%,0);
+    color: transparent;
+    height: 0%;
+    width: 0%;
+    opacity: 0;
+    overflow: hidden;
+    padding: 40px 0;
+    @include animation(fadenavOut 0.3s ease-out);
+    @include keyframes(fadenavOut) {
+      0% {
+        color: white;
+        background: hsla(0,0,5%,.95);
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+      }
+      99% {
+        color: transparent;
+        background: hsla(0,0,5%,0);
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+      }
+
+      100% {
+        color: transparent;
+        background: hsla(0,0,5%,0);
+        height: 0%;
+        width: 0%;
+      }
+    }
+  }
+}

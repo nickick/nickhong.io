@@ -1,0 +1,94 @@
+.content-section.resume {
+  font-size: 0.8em;
+
+  @media print {
+    a {
+      color: $text-black;
+      text-decoration: none;
+    }
+  }
+
+  .website {
+    margin-left: 2px;
+  }
+
+  &.show, &.showing, &.hiding {
+    .contents {
+      max-width: 800px;
+      padding: 10px;
+    }
+  }
+
+  .resume-header {
+    line-height: 0.7em;
+    text-align: center;
+  }
+
+  .resume-section {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    &:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      text-decoration: none;
+      border-bottom: none;
+      color: $text-black;
+      margin: 0 0 5px;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  .experience {
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .dates {
+      float: right;
+    }
+
+    .company {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      font-weight: bold;
+    }
+
+    .company-description, .tools {
+      font-style: italic;
+      font-size: 0.7rem;
+      margin-left: 10px;
+
+      @include media($mobile) {
+        display: none;
+      }
+    }
+
+    ul {
+      clear: both;
+      margin: 5px 0;
+      padding-left: 25px;
+    }
+  }
+
+  .education {
+    .name {
+      font-weight: bolder;
+    }
+    .dates {
+      float: right;
+      vertical-align: top;
+    }
+  }
+}

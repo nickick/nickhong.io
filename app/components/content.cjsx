@@ -1,15 +1,19 @@
-React = require('react');
-Intro = require('./content/intro');
-Projects = require('./content/projects');
-Skills = require('./content/skills');
-Contact = require('./content/contact');
+React = require('react')
+Intro = require('./content/intro')
+Projects = require('./content/projects')
+Resume = require('./content/resume')
+Contact = require('./content/contact')
+cx = require('classNames')
 
 Content = React.createClass
+  propTypes:
+    currentItem: React.PropTypes.string.isRequired
+
   render: ->
-    <div className="content">
+    <div className={cx(content: true, "full-width": this.props.currentItem == 'about' )}>
       <Intro show={this.props.currentItem == 'about'} />
       <Projects show={this.props.currentItem == 'portfolio'} />
-      <Skills show={this.props.currentItem == 'skills'} />
+      <Resume show={this.props.currentItem == 'resume'} />
       <Contact show={this.props.currentItem == 'contact'} />
     </div>
 

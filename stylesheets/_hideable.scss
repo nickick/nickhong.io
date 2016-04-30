@@ -1,9 +1,9 @@
 .hideable.content-section {
-  $animation-timing: .5s;
+  $animation-timing: 0.3s;
   height: 0;
   padding: 0;
   overflow: hidden;
-  background: white;
+  background: $subtle-background;
   position: absolute;
   top: 0;
   z-index: 1;

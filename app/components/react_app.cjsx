@@ -1,6 +1,8 @@
 React = require('react')
 Content = require('./content')
-Menu = require('./menu')
+MobileNav = require('./mobile_nav')
+DesktopNav = require('./desktop_nav')
+Header = require('./header')
 smoothScroll = require('smoothscroll')
 
 ReactApp = React.createClass
@@ -20,7 +22,8 @@ ReactApp = React.createClass
 
   render: ->
     <div id="react-app">
-      <Menu goToPath={this.goToPath} currentItem={this.state.currentItem} />
+      <MobileNav goToPath={this.goToPath} currentItem={this.state.currentItem} />
+      <Header goToPath={this.goToPath} currentItem={this.state.currentItem} />
       <Content currentItem={this.state.currentItem} />
     </div>
 
