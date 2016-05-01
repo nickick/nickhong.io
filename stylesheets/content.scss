@@ -6,14 +6,17 @@
 @import '_intro';
 @import '_projects';
 @import '_resume';
+@import '_contact';
 
 .content {
   margin: 0 auto;
   width: 100%;
   position: relative;
+  color: $text-black;
 
   @media print {
     margin-top: 0;
+    color: black;
   }
 }
 
@@ -21,19 +24,20 @@
   box-sizing: border-box;
   width: 100%;
 
-  &.show, &.showing, &.hiding {
-    padding: $container-padding;
+  .contents {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
 
-    .contents {
-      max-width: 1000px;
-      margin: 0 auto;
-      position: relative;
+    @include media($mobile) {
+      padding: $container-padding;
+      padding-top: 0;
     }
   }
 
   h3 {
-    display: inline-block;
-    color: $text-black;
     font-family: 'Lora', serif;
+    display: block;
+    text-align: center;
   }
 }

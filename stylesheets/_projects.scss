@@ -3,42 +3,81 @@
 }
 
 .project {
-  @include span-columns(4);
-  @include omega(3n);
+  @include span-columns(8);
+  @include shift(2);
 
   @include media($mobile) {
     @include span-columns(3);
+    @include shift(0);
     @include omega();
   }
 
-  box-shadow: 0 0.3rem 1rem hsla(0,0,0,.1);
-  border: 1px solid #eee;
+  box-shadow: 0 0.2rem 1rem hsla(0,0,0,.15);
+  border: 1px solid #ddd;
   padding: $container-padding;
   margin-bottom: 20px;
   background: #fbfbfb;
+  vertical-align: top;
+
+  .image-container-container {
+    @include span-columns(4);
+    @include omega();
+    margin-left: -$container-padding;
+
+    @include media($mobile) {
+      @include span-columns(3);
+    }
+  }
 
   .image-container {
     max-height: 150px;
+    width: 80%;
+    margin: 0 10%;
     overflow: hidden;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-bottom-width: 2px;
+
+    @include media($mobile) {
+      width: 95%;
+      margin: 0 2.5%;
+    }
   }
 
   .image {
     width: 100%;
-    border: 1px solid #eee;
   }
 
   .title-link {
     text-decoration: none;
+    color: $text-black;
   }
 
   .title {
-    color: $ocean-blue;
     font-size: 1.2rem;
     margin: 0 0 15px;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+  }
+
+  .description-container {
+    @include span-columns(8);
+    @include omega();
+    vertical-align: top;
+
+    @include media($mobile) {
+      @include span-columns(3);
+      margin: 20px 0 0;
+      padding: 0 10px;
+    }
   }
 
   .description {
     text-align: left;
     font-size: 0.9em;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
   }
 }

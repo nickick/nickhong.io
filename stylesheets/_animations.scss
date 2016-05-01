@@ -17,3 +17,70 @@
     @include transform(scale3d(1, 1, 1));
   }
 }
+
+$hideable-animation-timing: 0.3s;
+
+@mixin animation--show {
+  @include animation(show $hideable-animation-timing ease-out);
+}
+
+@include keyframes(show) {
+  0% {
+    @include transform(translateY(100%));
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 5;
+  }
+  1% {
+    @include transform(translateY(99%));
+    height: inherit;
+    opacity: 0.01;
+    overflow: hidden;
+    z-index: 5;
+  }
+
+  99% {
+    @include transform(translateY(0%));
+    height: inherit;
+    opacity: 0.99;
+    overflow: visible;
+    z-index: 5;
+  }
+  100% {
+    @include transform(translateY(0%));
+    height: inherit;
+    opacity: 1;
+    overflow: visible;
+    z-index: 5;
+  }
+}
+
+@mixin animation--hide {
+  @include animation(hide $hideable-animation-timing ease-out);
+}
+
+@include keyframes(hide) {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin animation--underline {
+  @include animation(underline-black 1s ease-in-out);
+}
+
+@include keyframes(underline-black) {
+  0% {
+    border-bottom: 1px solid transparent;
+  }
+  100% {
+    border-bottom: 1px solid $text-black;
+  }
+}

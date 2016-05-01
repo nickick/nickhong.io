@@ -1,9 +1,12 @@
 React = require('react');
 
 HireMe = React.createClass
+  getDefaultProps: ->
+    text: 'Hire Me'
   render: ->
     <div className='button'>
-      Hire Me
+      {this.props.text}
+      <i className='fa fa-share-alt'/>
     </div>
 
 module.exports = HireMe

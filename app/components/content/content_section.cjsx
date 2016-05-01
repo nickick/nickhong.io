@@ -6,15 +6,7 @@ ContentSection = React.createClass
     identifer: React.PropTypes.string.isRequired
     show: React.PropTypes.bool.isRequired
     children: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.node]).isRequired
-    fullWidth: React.PropTypes.bool
-    contentsWrap: React.PropTypes.bool
   }
-
-  getDefaultProps: ->
-    {
-      fullWidth: false
-      contentsWrap: true
-    }
 
   getInitialState: ->
     {
@@ -45,9 +37,9 @@ ContentSection = React.createClass
     this.refs.element?.addEventListener 'animationend', this.resetStates
 
   resetStates: (e) ->
-    if e.animationName == 'blurOut' # hide this component
+    if e.animationName == 'hide'
       state = { hiding: false, showing: false, hide: true, show: false }
-    else if e.animationName == 'slideUp' # show this component
+    else if e.animationName == 'show'
       state = { hiding: false, showing: false, hide: false, show: true }
     else
       return
@@ -59,7 +51,6 @@ ContentSection = React.createClass
       hideable: true
       'content-section': true
       "#{this.props.identifer}": true
-      'full-width': this.props.fullWidth
       show: this.state.show
       hidden: this.state.hide
       showing: !this.state.loading && this.state.showing

@@ -35,7 +35,12 @@ MobileNav = React.createClass
     })
 
     navItems = _.map ['About', 'Portfolio', 'Resume', 'Contact'], (item, i) =>
-      <NavItem toggleNav={this.toggleNav} goToPath={this.goToPath} path={"/#{item.toLowerCase()}"} title={item} key={i} />
+      <NavItem toggleNav={this.toggleNav}
+               goToPath={this.goToPath}
+               currentItem={this.props.currentItem}
+               path={"/#{item.toLowerCase()}"}
+               title={item}
+               key={i} />
 
     <div>
       <div className={navButtonClasses} onClick={this.toggleNav}>

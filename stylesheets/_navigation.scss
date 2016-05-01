@@ -1,3 +1,24 @@
+.nav-item {
+  cursor: pointer;
+
+  @include media($mobile) {
+    font-weight: light;
+  }
+
+  &.current {
+    a {
+      border-bottom: 1px solid $text-black;
+      @include animation--underline;
+
+      @include media($mobile) {
+        border-bottom: none;
+        font-weight: bold;
+        animation: none
+      }
+    }
+  }
+}
+
 /*
     Desktop nav button and nav menu
 */

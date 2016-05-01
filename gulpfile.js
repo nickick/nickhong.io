@@ -1,7 +1,7 @@
 var gulp        = require('gulp'),
     jshint      = require('gulp-jshint'),
     sass        = require('gulp-sass'),
-    neat        = require('node-neat').includePaths,
+    neat        = require('node-neat'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
     rename      = require('gulp-rename'),
@@ -17,7 +17,7 @@ var gulp        = require('gulp'),
     gulp.task('sass', function() {
       gulp.src(['stylesheets/*.scss'])
         .pipe(sass({
-          includePaths: ['styles'].concat(neat)
+          includePaths: neat.includePaths
         }))
         .pipe(rename('styles.css'))
         .pipe(gulp.dest('./public/assets/stylesheets'))

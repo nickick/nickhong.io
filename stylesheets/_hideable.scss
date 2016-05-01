@@ -1,85 +1,26 @@
 .hideable.content-section {
-  $animation-timing: 0.3s;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
+  display: none;
   background: $subtle-background;
   position: absolute;
   top: 0;
   z-index: 1;
+  @include transform(translateZ(0));
 
   &.hiding {
+    display: block;
     z-index: 1;
     height: 100%;
     overflow: visible;
     opacity: 0;
-    top: 0;
-    @mixin animation--blurOut {
-      @include animation(blurOut $animation-timing ease-out);
-    }
-
-    @include keyframes(blurOut) {
-      0% {
-        height: 100%;
-        overflow: visible;
-        opacity: 1;
-        z-index: 1;
-      }
-      99% {
-        height: 0;
-        height: 0;
-        padding: 0;
-        overflow: visible;
-        opacity: 0;
-        z-index: 1;
-      }
-      100% {
-        height: 0;
-        padding: 0;
-        overflow: hidden;
-        opacity: 0;
-        z-index: 1;
-      }
-    }
-    @include animation--blurOut;
+    @include backface-visibility(hidden);
+    @include animation--hide;
   }
 
   &.showing {
+    display: block;
     @include transform(translateY(0%));
     z-index: 5;
-
-    @mixin animation--slideUp {
-      @include animation(slideUp $animation-timing ease-out);
-    }
-
-    @include keyframes(slideUp) {
-      0% {
-        @include transform(translateY(100%));
-        height: 0;
-        overflow: hidden;
-        z-index: 5;
-      }
-      1% {
-        @include transform(translateY(99%));
-        height: inherit;
-        overflow: hidden;
-        z-index: 5;
-      }
-
-      99% {
-        @include transform(translateY(0%));
-        height: inherit;
-        overflow: visible;
-        z-index: 5;
-      }
-      100% {
-        @include transform(translateY(0%));
-        height: inherit;
-        overflow: visible;
-        z-index: 5;
-      }
-    }
-    @include animation--slideUp;
+    @include animation--show;
   }
 
   &.hidden {
@@ -87,6 +28,7 @@
   }
 
   &.show {
+    display: block;
     height: 100%;
     overflow: visible;
     z-index: 5;

@@ -6,7 +6,6 @@ Projects = React.createClass
   render: ->
     <ContentSection identifer='portfolio' show={this.props.show}>
       <h3>Portfolio</h3>
-      <p>I contributed to the companies below either as a full-time employee or as a contractor.</p>
       <div className='projects'>
         <Project imageSrc='/images/projects/instacart.png'
           title='Instacart'

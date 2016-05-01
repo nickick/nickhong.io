@@ -8,7 +8,6 @@ Resume = React.createClass
     <ContentSection identifer='resume' show={this.props.show}>
       <div className='resume-header'>
         <h2>Nicholas Hong</h2>
-        <a href='mailto:hong.nick@gmail.com' className='email'>hong.nick@gmail.com</a> |
         <a href='http://www.nickhong.io' className='website'>nickhong.io</a>
       </div>
       <div className='resume-section experiences'>
@@ -30,7 +29,7 @@ Resume = React.createClass
       </div>
       <div className='resume-section skills'>
         <h3>Skills</h3>
-        <p>Ruby, Rails, Redis, MySQL, PostGreSQL, MongoDB, Javascript, jQuery, Backbone.js, React.js, Angular.js,  Node.js, Express.js, Spree, Rspec, HTML5, CSS3, Git, Excel</p>
+        <p>Ruby, Rails, Redis, MySQL, PostgreSQL, MongoDB, Javascript, jQuery, Backbone.js, React.js, Angular.js,  Node.js, Express.js, Spree, Rspec, HTML5, CSS3, Git, Excel</p>
       </div>
       <div className='resume-section skills'>
         <h3>Other interests</h3>

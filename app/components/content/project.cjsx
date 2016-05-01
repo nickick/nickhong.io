@@ -16,10 +16,14 @@ Project = React.createClass
       <a href={this.props.link} className='title-link' target="_blank">
         <h4 className='title'>{this.props.title}</h4>
       </a>
-      <div className='image-container'>
-        <img className='image' src={this.props.imageSrc}/>
+      <div className='image-container-container'>
+        <div className='image-container'>
+          <img className='image' src={this.props.imageSrc}/>
+        </div>
       </div>
-      <p className='description' dangerouslySetInnerHTML={this.description()}/>
+      <div className='description-container'>
+        <p className='description' dangerouslySetInnerHTML={this.description()}/>
+      </div>
     </div>
 
 module.exports = Project

@@ -1,5 +1,7 @@
 .content-section.resume {
   font-size: 0.8em;
+  padding: 1.5*$container-padding;
+  padding-top: 0;
 
   @media print {
     a {
@@ -22,6 +24,11 @@
   .resume-header {
     line-height: 0.7em;
     text-align: center;
+    margin-bottom: 20px;
+
+    h2 {
+      font-family: 'Lora', serif;
+    }
   }
 
   .resume-section {
@@ -41,6 +48,10 @@
       color: $text-black;
       margin: 0 0 5px;
       text-transform: uppercase;
+
+      @include media($mobile) {
+        text-align: left;
+      }
     }
 
     p {
