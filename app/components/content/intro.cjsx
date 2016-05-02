@@ -25,7 +25,7 @@ Intro = React.createClass
         <h3>{this.intro.header}</h3>
         <div dangerouslySetInnerHTML={this.content()}/>
         <div className='hire-me-container'>
-          <HireMe text='Make a website with me'/>
+          <HireMe text='Make a website with me' showForm={false} />
         </div>
       </div>
     </ContentSection>

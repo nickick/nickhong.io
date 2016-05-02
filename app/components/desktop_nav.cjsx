@@ -1,5 +1,6 @@
 React = require('react')
 NavItem = require('./nav_item')
+ContactLinks = require('./contact_links')
 _ = require('underscore')
 
 DesktopNav = React.createClass
@@ -22,6 +23,7 @@ DesktopNav = React.createClass
       <ul>
         {navItems}
       </ul>
+      <ContactLinks />
     </div>
 
 module.exports = DesktopNav
