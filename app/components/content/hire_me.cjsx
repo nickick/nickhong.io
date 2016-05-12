@@ -22,11 +22,11 @@ HireMe = React.createClass
       </button>
 
       <form className='contact-me' onSubmit={this.submit}>
-        <label for='email'>Your email</label>
+        <label htmlFor='email'>Your email</label>
         <input type='text' id='email' name='email' placeholder='email@example.com'/>
-        <label for='subject'>Subject</label>
+        <label htmlFor='subject'>Subject</label>
         <input type='text' id='subject' name='subject' placeholder='Work on a new website'/>
-        <label for='content'>Message</label>
+        <label htmlFor='content'>Message</label>
         <textarea id='content' name='content' placeholder='Hi Nick! I want to make...' rows='4'/>
         <button className='button' onClick={this.submit}>
           Message me!

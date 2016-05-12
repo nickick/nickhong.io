@@ -29,7 +29,9 @@ Resume = React.createClass
       </div>
       <div className='resume-section skills'>
         <h3>Skills</h3>
-        <p>Ruby, Rails, Redis, MySQL, PostgreSQL, MongoDB, Javascript, jQuery, Backbone.js, React.js, Angular.js,  Node.js, Express.js, Spree, Rspec, HTML5, CSS3, Git, Excel</p>
+        <p><strong>Back-end</strong>: Ruby, Ruby on Rails, Redis, MySQL, PostgreSQL, MongoDB, Node.js, Express.js, Spree, Rspec, AWS, Heroku</p>
+        <p><strong>Front-end</strong>: JavaScript, React.js, Backbone.js, Angular.js, jQuery, HTML5, CSS3</p>
+        <p><strong>Other</strong>: Git, Excel, Powerpoint</p>
       </div>
       <div className='resume-section skills'>
         <h3>Other interests</h3>
