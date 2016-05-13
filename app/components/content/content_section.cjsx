@@ -1,5 +1,5 @@
 React = require('react')
-cx = require('classNames')
+cx = require('classnames')
 
 ContentSection = React.createClass
   propTypes: {
