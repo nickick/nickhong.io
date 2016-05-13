@@ -8,7 +8,7 @@ Resume = React.createClass
     <ContentSection identifer='resume' show={this.props.show}>
       <div className='resume-header'>
         <h2>Nicholas Hong</h2>
-        <a href='http://www.nickhong.io' className='website'>nickhong.io</a>
+        <a href='http://nickhong.io' className='website'>nickhong.io</a>
       </div>
       <div className='resume-section experiences'>
         <h3>Experience</h3>
