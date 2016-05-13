@@ -43,6 +43,10 @@
 
   .hire-me-container {
     padding-top: 10px;
+
+    @include media($mobile) {
+      padding-top: 25px;
+    }
   }
 
   .animate-untz {

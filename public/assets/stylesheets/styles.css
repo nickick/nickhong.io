@@ -1619,6 +1619,9 @@ html {
           margin: 0; } }
   .intro .hire-me-container {
     padding-top: 10px; }
+    @media screen and (max-width: 500px) {
+      .intro .hire-me-container {
+        padding-top: 25px; } }
   .intro .animate-untz {
     display: inline-block;
     cursor: pointer; }
