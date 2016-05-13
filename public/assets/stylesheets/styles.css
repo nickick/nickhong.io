@@ -1787,6 +1787,9 @@ html {
 
 .contact {
   padding-top: 20px; }
+  @media screen and (max-width: 500px) {
+    .contact .contact-me {
+      padding: 0 20px; } }
   .contact .contact-links {
     display: none; }
     @media screen and (max-width: 500px) {
@@ -1834,7 +1837,7 @@ html {
     @media screen and (max-width: 500px) {
       .contact-me .error {
         width: 100%;
-        margin-left: 10px; } }
+        margin-left: 0; } }
   .contact-me .errored input, .contact-me .errored textarea {
     -webkit-animation: shake 1s ease-in-out;
     -moz-animation: shake 1s ease-in-out;
@@ -1857,7 +1860,7 @@ html {
         padding: 0 10px;
         -webkit-appearance: none;
         box-shadow: none;
-        border: none; } }
+        border: 1px solid #ddd; } }
   .contact-me label {
     display: inline-block;
     width: 20%;
@@ -1868,6 +1871,7 @@ html {
       .contact-me label {
         text-align: left;
         margin: 5px 0;
+        padding: 0;
         width: 100%; } }
   .contact-me button {
     display: block;
