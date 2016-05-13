@@ -84,3 +84,21 @@ $hideable-animation-timing: 0.3s;
     border-bottom: 1px solid $text-black;
   }
 }
+
+@mixin animation--shake {
+  @include animation(shake 1s ease-in-out);
+}
+
+@include keyframes(shake) {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}

@@ -17,6 +17,7 @@
     "express": "^4.13.4",
     "node-bourbon": "^4.2.8",
     "node-neat": "^1.7.2",
+    "nodemailer": "^2.4.1",
     "normalize.css": "^4.1.1",
     "path": "^0.12.7",
     "react": "^15.0.1",

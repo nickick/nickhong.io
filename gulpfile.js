@@ -25,7 +25,7 @@ var gulp        = require('gulp'),
     });
 
     gulp.task('scripts', function() {
-      gulp.src(['app/main.js'])
+      gulp.src(['app/main.js', 'app/mailController.js'])
           .pipe(browserify({
             debug: true,
             transform: [ 'coffee-reactify' ],
@@ -37,7 +37,7 @@ var gulp        = require('gulp'),
 
     gulp.task('watch', function() {
         livereload.listen();
-        gulp.watch(['app/*.js', 'app/**/*.cjsx'], ['lint', 'scripts']);
+        gulp.watch(['app/*.js', 'app/*.coffee', 'app/**/*.cjsx'], ['lint', 'scripts']);
         gulp.watch('stylesheets/*.scss', ['sass']);
     });
 

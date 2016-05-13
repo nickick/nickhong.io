@@ -16,7 +16,7 @@
     }
 
     @include media($mobile) {
-      top: 0;
+      top: 20px;
       left: 50%;
       margin-left: -18%;
     }
@@ -27,11 +27,13 @@
     position: absolute;
     right: 0;
     text-align: left;
+    padding-top: 50px;
 
     @include media($mobile) {
-      top: 150px;
+      top: 190px;
       width: 80%;
       left: 10%;
+      padding-top: 0;
 
       h3 {
         margin: 0;

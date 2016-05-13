@@ -536,6 +536,30 @@ textarea {
   100% {
     border-bottom: 1px solid rgba(64, 64, 64, 0.99); } }
 
+@-webkit-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@-moz-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
 html {
   box-sizing: border-box; }
 
@@ -720,6 +744,30 @@ html {
   100% {
     border-bottom: 1px solid rgba(64, 64, 64, 0.99); } }
 
+@-webkit-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@-moz-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
 @-webkit-keyframes pop {
   0% {
     -webkit-transform: scale3d(1, 1, 1); }
@@ -892,6 +940,36 @@ html {
   100% {
     border-bottom: 1px solid rgba(64, 64, 64, 0.99); } }
 
+@-webkit-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@-moz-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 .button {
   display: inline-block;
   padding: 5px 10px;
@@ -900,6 +978,9 @@ html {
   color: white;
   background-color: #006bf6;
   cursor: pointer; }
+  @media screen and (max-width: 500px) {
+    .button {
+      padding: 20px; } }
   .button:hover {
     -webkit-animation: button--hover 0.3s ease-in-out;
     -moz-animation: button--hover 0.3s ease-in-out;
@@ -1163,6 +1244,30 @@ html {
   100% {
     border-bottom: 1px solid rgba(64, 64, 64, 0.99); } }
 
+@-webkit-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@-moz-keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
 html {
   box-sizing: border-box; }
 
@@ -1352,7 +1457,7 @@ html {
     width: 100%;
     text-align: center; }
   .mobile-nav li {
-    padding: 10px 0;
+    padding: 20px 0;
     border-top: 1px solid rgba(77, 77, 77, 0.8);
     border-left-width: 0px;
     border-right-width: 0px;
@@ -1495,19 +1600,21 @@ html {
       width: 100%; }
     @media screen and (max-width: 500px) {
       .intro .profile-pic {
-        top: 0;
+        top: 20px;
         left: 50%;
         margin-left: -18%; } }
   .intro .intro-text {
     width: 60%;
     position: absolute;
     right: 0;
-    text-align: left; }
+    text-align: left;
+    padding-top: 50px; }
     @media screen and (max-width: 500px) {
       .intro .intro-text {
-        top: 150px;
+        top: 190px;
         width: 80%;
-        left: 10%; }
+        left: 10%;
+        padding-top: 0; }
         .intro .intro-text h3 {
           margin: 0; } }
   .intro .hire-me-container {
@@ -1708,8 +1815,33 @@ html {
 .contact-me-container.showForm .contact-me {
   display: block; }
 
+.contact-me-container.thank-you {
+  padding: 10px 40px;
+  text-align: center; }
+  .contact-me-container.thank-you br {
+    display: none; }
+    @media screen and (max-width: 500px) {
+      .contact-me-container.thank-you br {
+        display: block; } }
+
 .contact-me {
   text-align: center; }
+  .contact-me .error {
+    margin-left: 28%;
+    color: #a9232a;
+    text-align: left;
+    font-size: 0.8em; }
+    @media screen and (max-width: 500px) {
+      .contact-me .error {
+        width: 100%;
+        margin-left: 10px; } }
+  .contact-me .errored input, .contact-me .errored textarea {
+    -webkit-animation: shake 1s ease-in-out;
+    -moz-animation: shake 1s ease-in-out;
+    animation: shake 1s ease-in-out; }
+  .contact-me .errored .error {
+    margin-bottom: 10px;
+    opacity: 0.9; }
   .contact-me input, .contact-me textarea {
     display: inline-block;
     width: 66%;
@@ -1739,6 +1871,8 @@ html {
       .contact-me button {
         width: 100%;
         margin: 20px 1%; } }
+    .contact-me button i {
+      margin-left: 10px; }
 
 .contact-links {
   text-align: center;

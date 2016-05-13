@@ -42,10 +42,46 @@
       display: block;
     }
   }
+
+  &.thank-you {
+    padding: 10px 40px;
+    text-align: center;
+
+    br {
+      display: none;
+
+      @include media($mobile) {
+        display: block;
+      }
+    }
+  }
 }
 
 .contact-me {
   text-align: center;
+
+  .error {
+    margin-left: 28%;
+    color: $red;
+    text-align: left;
+    font-size: 0.8em;
+
+    @include media($mobile) {
+      width: 100%;
+      margin-left: 10px;
+    }
+  }
+
+  .errored {
+    input, textarea {
+      @include animation--shake;
+    }
+
+    .error {
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+  }
 
   input, textarea {
     display: inline-block;
@@ -82,6 +118,10 @@
     @include media($mobile) {
       width: 100%;
       margin: 20px 1%;
+    }
+
+    i {
+      margin-left: 10px;
     }
   }
 }

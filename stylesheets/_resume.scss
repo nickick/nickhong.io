@@ -49,9 +49,6 @@
       margin: 0 0 5px;
       text-transform: uppercase;
       text-align: left;
-
-      @include media($mobile) {
-      }
     }
 
     p {
