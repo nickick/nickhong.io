@@ -1671,7 +1671,9 @@ html {
         float: left;
         display: block;
         margin-right: 10.1484%;
-        width: 100%; }
+        width: 100%;
+        text-align: center;
+        margin-left: 0; }
         .project .image-container-container:last-child {
           margin-right: 0; } }
   .project .image-container {
@@ -1684,8 +1686,9 @@ html {
     border-bottom-width: 2px; }
     @media screen and (max-width: 500px) {
       .project .image-container {
+        display: inline-block;
         width: 95%;
-        margin: 0 2.5%; } }
+        margin: 0; } }
   .project .image {
     width: 100%; }
   .project .title-link {
