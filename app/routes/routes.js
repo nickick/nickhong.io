@@ -6,14 +6,16 @@ var mailer = require('../mailer');
 
 module.exports = function(app) {
   app.get('/', function(req, res){
-    var reactHtml = ReactDOMServer.renderToString(ReactApp({currentPath: '/about'}));
+    var reactHtml = ReactDOMServer.renderToString(ReactApp({ currentPath: '/about' }));
+    res.render('index.ejs', {reactOutput: reactHtml});
+  });
+
+  app.get(/about|portfolio|resume|contact/i, function(req, res){
+    var reactHtml = ReactDOMServer.renderToString(ReactApp({ currentPath: req.originalUrl }));
     res.render('index.ejs', {reactOutput: reactHtml});
   });
 
   app.post('/contact', mailer);
 
-  app.get('/*', function(req, res){
-    var reactHtml = ReactDOMServer.renderToString(ReactApp({currentPath: req.originalUrl }));
-    res.render('index.ejs', {reactOutput: reactHtml});
-  });
+  app.get('/*', function(req, res){ res.redirect('/'); });
 };
