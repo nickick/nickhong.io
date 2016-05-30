@@ -7,8 +7,8 @@ Header = React.createClass
       <div className="header">
         <div className='about-anchor' id='about'/>
         <span className='header-text'>
-          <h1>Nick Hong</h1>
-          <p>Web Developer</p>
+          <h1>Jin Tran</h1>
+          <p>Master of Social Work</p>
         </span>
         <DesktopNav goToPath={this.props.goToPath} currentItem={this.props.currentItem} />
       </div>

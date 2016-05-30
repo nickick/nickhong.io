@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
 module.exports = function(req, res) {
   var mailOpts = {
     from: req.body.email,
-    to: 'hong.nick+nickhongio@gmail.com',
+    to: 'for.jin.tran+jintrancom@gmail.com',
     subject: req.body.subject,
     text: req.body.content
   };

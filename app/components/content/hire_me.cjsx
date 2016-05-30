@@ -91,12 +91,12 @@ HireMe = React.createClass
         </div>
         <div className={cx('subject-container': true, errored: !!this.state.formErrors.subject)}>
           <label htmlFor='subject'>Subject</label>
-          <input type='text' id='subject' name='subject' ref='subject' placeholder='Work on a new website' onFocus={this.onFocus}/>
+          <input type='text' id='subject' name='subject' ref='subject' placeholder='Hello Jin' onFocus={this.onFocus}/>
           <div className='error'>{this.state.formErrors.subject}</div>
         </div>
         <div className={cx('content-container': true, errored: !!this.state.formErrors.content)}>
           <label htmlFor='content'>Message</label>
-          <textarea id='content' name='content' ref='content' placeholder='Hi Nick! I want to make...' rows='4' onFocus={this.onFocus}/>
+          <textarea id='content' name='content' ref='content' placeholder='Hi Jin! ...' rows='4' onFocus={this.onFocus}/>
           <div className='error'>{this.state.formErrors.content}</div>
         </div>
         {this.button()}

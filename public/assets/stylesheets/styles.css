@@ -1785,11 +1785,18 @@ html {
       clear: both;
       margin: 5px 0;
       padding-left: 25px; }
+  .content-section.resume .skills strong {
+    font-size: 1.2em; }
   .content-section.resume .education .name {
     font-weight: bolder; }
   .content-section.resume .education .dates {
     float: right;
     vertical-align: top; }
+  .content-section.resume .education .major {
+    font-style: italic; }
+  .content-section.resume .education ul {
+    margin: 5px 0;
+    padding-left: 25px; }
 
 .contact {
   padding-top: 20px; }

@@ -90,6 +90,12 @@
     }
   }
 
+  .skills {
+    strong {
+      font-size: 1.2em;
+    }
+  }
+
   .education {
     .name {
       font-weight: bolder;
@@ -97,6 +103,14 @@
     .dates {
       float: right;
       vertical-align: top;
+    }
+    .major {
+      font-style: italic;
+    }
+
+    ul {
+      margin: 5px 0;
+      padding-left: 25px;
     }
   }
 }

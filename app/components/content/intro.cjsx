@@ -19,21 +19,21 @@ Intro = React.createClass
   render: ->
     <ContentSection identifer='intro' show={this.props.show}>
       <div className='profile-pic animation--pop'>
-        <img src='/images/profile.jpg'/>
+        <img src='/images/jin.jpg'/>
       </div>
       <div className='intro-text'>
         <h3>{this.intro.header}</h3>
         <div dangerouslySetInnerHTML={this.content()}/>
         <div className='hire-me-container'>
-          <HireMe text='Make a website with me' showForm={false} />
+          <HireMe text='Contact me' showForm={false} />
         </div>
       </div>
     </ContentSection>
 
   intro:
-    header: "Hi, I'm Nick."
+    header: "Hi, I'm Jin."
     content: [
-      "I'm a software engineer based in San Francisco. I like creating <strong>beautiful websites</strong> with <strong>unique designs, animations</strong>, and <strong>mobile responsiveness</strong>."
+      " I am a social worker turned project manager experienced in strategy, business development, and email marketing in B2C tech startups and nonprofits."
     ]
     extraContent: [
       "I also like kickboxing, <span class='animate-untz'>EDM</span>, and black coffee. I take myself less seriously than the picture to the left suggests."
