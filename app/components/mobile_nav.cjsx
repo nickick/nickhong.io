@@ -34,7 +34,7 @@ MobileNav = React.createClass
       close: this.state.navClosed
     })
 
-    navItems = _.map ['About', 'Portfolio', 'Resume', 'Contact'], (item, i) =>
+    navItems = _.map ['About', 'Resume', 'Contact'], (item, i) =>
       <NavItem toggleNav={this.toggleNav}
                goToPath={this.goToPath}
                currentItem={this.props.currentItem}
