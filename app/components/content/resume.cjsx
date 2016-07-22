@@ -12,11 +12,11 @@ Resume = React.createClass
       </div>
       <div className='resume-section skills'>
         <h3>Skills</h3>
-        <p><strong>Cross Functional Relationship Management</strong>: Project execution alongside stakeholders of
-        different levels and backgrounds, from leading weekly meetings with C-level executives to managing partners
-        and client communities online and in the field. Collaborated with Product, Design, Marketing,
+        <p><strong>Cross Functional Relationship Management</strong>: Project execution alongside stakeholders of different
+        levels and backgrounds, from leading weekly meetings with C-level executives to managing partners and client
+        communities online and in the field. Master listener. Collaborated with Product, Design, Marketing,
         Business Intelligence, Operations, and Customer Support teams</p>
-        <p><strong>Process Creation and Optimization</strong>: Strategy, implementation, testing, and analysis in
+        <p><strong>Process Creation and Optimization</strong>: Scrappy with strategy, implementation, testing, and analysis in
         web product, operations, and partnerships</p>
         <p><strong>Cross Cultural and Multilingual</strong>: Lived and worked one year in India. Fluent English and
         Shantounese; proficient Mandarin, Cantonese, and French; basic Hindi</p>
@@ -44,13 +44,15 @@ Resume = React.createClass
   experiences:
     facebook:
       company:            'Facebook'
-      companyDescription: ''
+      companyDescription: 'Social platform with over 1.6 billion users'
       link:               'http://facebook.com'
       title:              'Media Support Coordinator'
       tools:              ''
       dates:              'April 2016 - Current'
       description: [
-        "Email marketing and onboarding of users to Facebook Live"
+        "Scaled onboarding of influencers to Facebook Live with email campaigns and direct support"
+        "As a team of four, responsible for 44% of tracked Facebook Live onboards within three months"
+        "Created  A/B testing process within team to optimize Live adoptions from email campaigns and saw up to a 4% Live adoption rate within two weeks"
       ]
     pley:
       company:            'PleyWorld'
