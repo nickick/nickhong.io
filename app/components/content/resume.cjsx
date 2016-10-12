@@ -14,13 +14,11 @@ Resume = React.createClass
         <h3>Skills</h3>
         <p><strong>Cross Functional Relationship Management</strong>: Project execution alongside stakeholders of different
         levels and backgrounds, from leading weekly meetings with C-level executives to managing partners and client
-        communities online and in the field. Master listener. Collaborated with Product, Design, Marketing,
-        Business Intelligence, Operations, and Customer Support teams</p>
-        <p><strong>Process Creation and Optimization</strong>: Scrappy with strategy, implementation, testing, and analysis in
-        web product, operations, and partnerships</p>
+        communities online and in the field.</p>
+        <p><strong>Process Creation and Optimization</strong>: Scrappy with strategy, implementation, testing, and analysis</p>
         <p><strong>Cross Cultural and Multilingual</strong>: Lived and worked one year in India. Fluent English and
         Shantounese; proficient Mandarin, Cantonese, and French; basic Hindi</p>
-        <p><strong>Project and Email Management Tools</strong>: JIRA, GoogleDocs, Excel, SQL; Salesforce Marketing Cloud, EmailDirect, HTML</p>
+        <p><strong>Project and Email Management Tools</strong>: JIRA, GoogleDocs, Excel, SQL; Salesforce, EmailDirect, HTML</p>
       </div>
       <div className='resume-section experiences'>
         <h3>Experience</h3>
@@ -29,10 +27,13 @@ Resume = React.createClass
         <Experience experienceObj = this.experiences.live365 />
         <Experience experienceObj = this.experiences.crowdera />
         <Experience experienceObj = this.experiences.grayMattersCapital />
-        <Experience experienceObj = this.experiences.nonprofitConsultingPractica />
       </div>
       <div className='resume-section education'>
         <h3>Education</h3>
+        <div className='name'>Stanford University</div>
+        <div className='major'>Certificate for Introduction to Databases, 2013</div>
+          <div className='name'>Monterey Institute of International Studies</div>
+        <div className='major'>Certificate in Social Entrepreneurship, 2013</div>
         <div className='name'>Washington University in St. Louis</div>
         <div className='major'>Master of Social Work, Social and Economic Development 2011 | 3.8 GPA</div>
         <ul><li>Research Assistant for Dr. Aaron Hipp: Focus groups for Social Ecological Constraints to Park Use in Communities with Proximate Park Access. Presented at symposium May 2011 in Chicago Environmental Research Design Conference</li></ul>
@@ -53,6 +54,7 @@ Resume = React.createClass
         "Scaled onboarding of influencers to Facebook Live with email campaigns and direct support"
         "As a team of four, responsible for 44% of tracked Facebook Live onboards within three months"
         "Created  A/B testing process within team to optimize Live adoptions from email campaigns and saw up to a 4% Live adoption rate within two weeks"
+        "Ensured media integrity of celebrity and influencer profiles on Facebook and Instagram. Coordinated real-time solutions for high-priority clients and events including Olympic athletes, and 2016 elections activities and presidential debates"
       ]
     pley:
       company:            'PleyWorld'
